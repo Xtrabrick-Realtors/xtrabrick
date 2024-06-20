@@ -26,9 +26,14 @@ export const CarouselItemContainer = styled.div<{ slidesToShow: number }>`
 export const CarouselItem = styled.div<{ slidesToShow: number }>`
   position: relative;
   flex: ${({ slidesToShow }) =>
-    slidesToShow > 1 ? `0 0 calc(100% / ${slidesToShow} - 10px)` : "0 0 100%"};
+    slidesToShow > 1
+      ? `0 0 calc(100% / ${slidesToShow} - 10px)`
+      : "0 0 100%"}; // Width of slide minus margin if slidesToShow > 1, otherwise full width
   box-sizing: border-box;
-  margin: ${({ slidesToShow }) => (slidesToShow > 1 ? "0 5px" : "0")};
+  margin: ${({ slidesToShow }) =>
+    slidesToShow > 1
+      ? "0 5px"
+      : "0"}; // Half of the 10px total margin (5px on each side) if slidesToShow > 1
 `;
 
 export const ButtonWrapper = styled.div`
@@ -37,13 +42,14 @@ export const ButtonWrapper = styled.div`
   position: "relative";
 
   .embla__button {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.4);
     border-radius: 50%;
+    background-color: white;
   }
 
   .embla__button--prev {

@@ -1,10 +1,9 @@
-// Header.styles.tsx
 import { theme } from "@/constants/basetheme";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   width: 100vw;
-  height: 89px;
+  height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -105,13 +104,13 @@ export const PhoneNumberWrapper = styled.div`
   cursor: pointer;
   gap: 10px;
   &:hover {
-    background-color: #D9D9D9;
-    border: 1px solid #9FDEFF;
+    background-color: #d9d9d9;
+    border: 1px solid #9fdeff;
     .phoneIcon {
-      fill: #0173B0 !important;
+      fill: #0173b0 !important;
     }
     .phoneText {
-      color: #0173B0 !important;
+      color: #0173b0 !important;
     }
   }
 
@@ -177,7 +176,7 @@ export const MenuDropdownContainer = styled.div`
   width: max-content;
   border-radius: 8px;
 `;
-export const DropdownItem = styled.p<{subLink?: boolean}>`
+export const DropdownItem = styled.p<{ subLink?: boolean }>`
   cursor: pointer;
   color: ${theme.colors.black};
   font-family: ${theme.fonts.lato};
@@ -189,15 +188,15 @@ export const DropdownItem = styled.p<{subLink?: boolean}>`
   }
 `;
 
-export const MenuDropdownItem = styled.p<{subLink?: boolean}>`
+export const MenuDropdownItem = styled.p<{ subLink?: boolean }>`
   cursor: pointer;
   color: ${theme.colors.black};
   font-family: ${theme.fonts.lato};
-  font-weight:  ${({subLink = false}) => subLink ? 400 : 700};
+  font-weight: ${({ subLink = false }) => (subLink ? 400 : 700)};
   text-decoration: none;
-  font-size: ${({subLink = false}) => subLink ? '14px' : '16px'};
-  margin-top: ${({subLink = false}) => subLink ? '0px' : '20px'};
-  margin-bottom:  ${({subLink = false}) => subLink ? '10px' : '15px'};
+  font-size: ${({ subLink = false }) => (subLink ? "14px" : "16px")};
+  margin-top: ${({ subLink = false }) => (subLink ? "0px" : "20px")};
+  margin-bottom: ${({ subLink = false }) => (subLink ? "10px" : "15px")};
   &:hover {
     color: #0173b0;
   }
@@ -218,7 +217,6 @@ export const SearchDropdownContainer = styled.div<{ isSearchVisible: boolean }>`
   border-radius: 8px;
   padding: 20px;
   max-width: 252px;
-
 `;
 
 export const MenuhDropdownContainer = styled.div<{ isSearchVisible: boolean }>`
@@ -236,7 +234,6 @@ export const MenuhDropdownContainer = styled.div<{ isSearchVisible: boolean }>`
   border-radius: 8px;
   padding: 0px 20px;
   max-width: 252px;
-
 `;
 
 export const SearchContainer = styled.div`

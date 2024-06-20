@@ -5,7 +5,7 @@ interface FontProps {
   fontFamily?: string;
 }
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.div<{ isOpen?: boolean }>`
   width: 100%;
   background-color: #1c1c1c;
   display: flex;
@@ -13,11 +13,11 @@ export const FooterContainer = styled.div`
   align-items: center;
   padding-top: 50px;
   margin-top: 55px;
-  margin-bottom: 127px;
+  margin-bottom: ${({ isOpen = false }) => (isOpen ? "127px" : "0px")};
 
   @media (max-width: 767px) {
     padding-top: 30px;
-    margin-top: 30px; 
+    margin-top: 30px;
     margin-bottom: 0;
   }
 `;
@@ -29,7 +29,7 @@ export const ContentWrapper = styled.div`
 
   @media (max-width: 767px) {
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
   }
 `;
 
@@ -56,21 +56,19 @@ export const FooterLink = styled.div<FontProps>`
     color: ${theme.colors.white};
     margin-bottom: 15px;
     @media (max-width: 767px) {
-    font-size: 14px;
-    font-family: ${theme.fonts.lato};
-  }
-
+      font-size: 14px;
+      font-family: ${theme.fonts.lato};
+    }
   }
 
   & .link {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 15px;
-    color: #DBE9FF;
+    color: #dbe9ff;
     @media (max-width: 767px) {
-    font-size: 12px;
-  }
-  
+      font-size: 12px;
+    }
   }
 
   p {
@@ -148,17 +146,18 @@ export const CopyrightText = styled.p<FontProps>`
   width: 80%;
 
   @media (max-width: 767px) {
-    font-size: 12px; 
+    font-size: 12px;
     text-align: center;
   }
 `;
 
-export const FixedFooterContainer = styled.div`
+export const FixedFooterContainer = styled.div<{ isOpen?: boolean }>`
   position: fixed;
-  bottom: 0;
+  bottom: ${({ isOpen = false }) => (isOpen ? 0 : "-127px")};
   left: 0;
   width: 100%;
-  height: 127px;
+  height: ${({ isOpen = false }) => (isOpen ? "127px" : "0px")};
+  transition: all 1s ease-in-out 1s;
   background-color: black;
   z-index: 999999;
   display: flex;
@@ -232,4 +231,36 @@ export const FixedFooterButton = styled.button`
   @media (max-width: 767px) {
     margin-top: 10px;
   }
+`;
+
+export const EnquireButton = styled.div`
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  padding: 15px 20px;
+  background-color: #0173b0;
+  cursor: pointer;
+  border-radius: 15px;
+`;
+
+export const EnquireButtonText = styled.div`
+  color: ${theme.colors.white};
+  font-size: 18px;
+  font-family: ${theme.fonts.lato};
+`;
+
+export const CrossIconWrapper = styled.div`
+  position: absolute;
+  right: 10px;
+  top: -45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 55px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: black;
+  border-radius: 10px 10px 0px 0px;
+  cursor: pointer;
 `;

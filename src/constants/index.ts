@@ -10,12 +10,15 @@ import CycleIcon from "../../public/assets/svg/CycleIcon";
 import DeveloperplotsIcon from "../../public/assets/svg/DeveloperplotsIcon";
 import DiningAreaIcon from "../../public/assets/svg/DiningAreaIcon";
 import DocumentationIcon from "../../public/assets/svg/DocumentationIcon";
+import EnergyIcon from "../../public/assets/svg/EnergyIcon";
 import EthicsIcon from "../../public/assets/svg/EthicsIcon";
 import FacebookIcon from "../../public/assets/svg/FacebookIcon";
 import FiveElementsIcon from "../../public/assets/svg/FiveElementsIcon";
 import FormIcon from "../../public/assets/svg/FormIcon";
+import FortuneIcon from "../../public/assets/svg/FortuneIcon";
 import FundingIcon from "../../public/assets/svg/FundingIcon";
 import GymIcon from "../../public/assets/svg/GymIcon";
+import HealthIcon from "../../public/assets/svg/HealthIcon";
 import HomeIcon from "../../public/assets/svg/HomeIcon";
 import IdealLocationIcon from "../../public/assets/svg/IdealLocationIcon";
 import InstagramIcon from "../../public/assets/svg/InstagramIcon";
@@ -24,9 +27,11 @@ import LivingAreaicon from "../../public/assets/svg/LivingAreaicon";
 import LocationIcon from "../../public/assets/svg/LocationIcon";
 import MailIcon from "../../public/assets/svg/MailIcon";
 import MissionIcon from "../../public/assets/svg/MissionIcon";
+import ObstacleIcon from "../../public/assets/svg/ObstacleIcon";
 import PhoneIcon from "../../public/assets/svg/PhoneIcon";
 import PiggyBankIcon from "../../public/assets/svg/PiggyBankIcon";
 import PlaneIcon from "../../public/assets/svg/PlaneIcon";
+import PositivityIcon from "../../public/assets/svg/PositivityIcon";
 import QualityIcon from "../../public/assets/svg/QualityIcon";
 import Sustainabilityicon from "../../public/assets/svg/SustainabilityIcon";
 import SwimmingPoolIcon from "../../public/assets/svg/SwimmingPoolIcon";
@@ -54,10 +59,10 @@ export const HEADER_ITEMS = [
         name: "Non-Agricultural plots",
         link: "/properties/#developerUnits",
       },
-      {
-        name: "Developer Units",
-        link: "/properties/#developerUnits",
-      },
+      // {
+      // name: "Developer Units",
+      // link: "/properties/#developerUnits",
+      // },
     ],
   },
   {
@@ -79,18 +84,12 @@ export const HEADER_ITEMS = [
     ],
   },
   {
-    name: "About Us",
-    link: "/#aboutUs",
+    name: "Vaastu Shastra",
+    link: "/vaastu",
   },
   {
-    name: "Contact Us",
-    link: "/contactUs",
-    dropdownItems: [
-      {
-        name: "Enquiry Form",
-        link: "/contactUs",
-      },
-    ],
+    name: "About Us",
+    link: "/#aboutUs",
   },
   {
     name: "Careers",
@@ -123,6 +122,18 @@ export const PROMOTIONAL_BANNER_ITEMS = [
 
 export const CLIENTS_INFO = [
   {
+    name: "Kohinoor",
+    image: "/assets/images/ourClients/kp-v2.png",
+  },
+  {
+    name: "VTPREALITY",
+    image: "/assets/images/ourClients/vtpReality-v2.png",
+  },
+  {
+    name: "Krisala",
+    image: "/assets/images/ourClients/krisala-v2.png",
+  },
+  {
     name: "AG",
     image: "/assets/images/ourClients/ag-v2.png",
   },
@@ -131,20 +142,8 @@ export const CLIENTS_INFO = [
     image: "/assets/images/ourClients/kg-v2.png",
   },
   {
-    name: "VTPREALITY",
-    image: "/assets/images/ourClients/vtpReality-v2.png",
-  },
-  {
-    name: "Kohinoor",
-    image: "/assets/images/ourClients/kp-v2.png",
-  },
-  {
     name: "VJ",
     image: "/assets/images/ourClients/vj-v2.png",
-  },
-  {
-    name: "Krisala",
-    image: "/assets/images/ourClients/krisala-v2.png",
   },
 ];
 
@@ -270,34 +269,52 @@ export const OUR_TEAM_DATA = [
     image: "/assets/images/ourTeam1.png",
     name: "Mr. Sangram Jakate",
     position: "Founder, CEO",
-    company: "Xtrabrick Realtors, MAAISA GROUP",
+    company: "Xtrabrick Realtors",
   },
   {
     image: "/assets/images/ourTeam2.png",
     name: "Ms. Divya Pawar",
     position: "Marketing Executive",
-    company: "Xtrabrick Realtors, MAAISA GROUP",
+    company: "Xtrabrick Realtors",
   },
   {
     image: "/assets/images/ourTeam3.png",
     name: "Ms. Nikita Vaidya",
     position: "Sales Team Lead",
-    company: "Xtrabrick Realtors, MAAISA GROUP",
+    company: "Xtrabrick Realtors",
+  },
+  {
+    name: "Ms. Ankita Tayade",
+    position: "Pre-sales Executive",
+    company: "Xtrabrick Realtors",
+  },
+  {
+    name: "Ms. Maya Sabale",
+    position: "Pre-sales Executive",
+    company: "Xtrabrick Realtors",
+  },
+  {
+    name: "Ms. Soniya Jadhav",
+    position: "Pre-sales Executive",
+    company: "Xtrabrick Realtors",
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    name: "Sudhir patil",
+    name: "Sudhir Patil",
     testimony: `I just wanted to take a moment to express my appreciation for the fantastic job you guys do. I'm really glad I chose to work with you. Your websites are incredibly user-friendly and easy to manage. I never encounter any issues when updating or making changes. Thanks to the expertise and professionalism of Xtrabrick, I now have a beautiful new property that I can proudly call home. I am beyond satisfied with the service I received, and I would highly recommend Xtrabrick to anyone in need of a new property. Thank you once again for making the booking process such a positive and stress-free experience`,
+    stars: 5,
   },
   {
-    name: "Snehal shinde",
+    name: "Snehal Shinde",
     testimony: `Our dream property booking with Xtrabrick was an absolute joy. The team's attention to detail, prompt communication, and expert guidance made the process seamless. We found the perfect home with their help. Highly recommend!`,
+    stars: 5,
   },
   {
     name: "Suresh",
     testimony: `Booking my new property with Xtrabrick was an incredible experience. Their professionalism and attention to detail were outstanding. They truly understood my needs and went above and beyond to find the perfect match. Thanks to them, I now own a stunning property that surpasses all expectations. I highly recommend Xtrabrick for anyone searching for their dream home.`,
+    stars: 4,
   },
 ];
 
@@ -315,7 +332,7 @@ export const FOOTER_LINKS = [
         link: "/properties/#commercialProperties",
       },
       {
-        name: "Developer Units",
+        name: "Non-Agricultural plots",
         link: "/properties/#developerUnits",
       },
     ],
@@ -323,10 +340,6 @@ export const FOOTER_LINKS = [
   {
     heading: "Loan Services",
     links: [
-      {
-        name: "Loan Services",
-        link: "/loan#loanServies",
-      },
       {
         name: "Banking Partners",
         link: "/loan#bankingPartners",
@@ -349,7 +362,7 @@ export const FOOTER_LINKS = [
         link: "/vaastu#vaastuShastra",
       },
       {
-        name: "Why is Vaastu Important",
+        name: "Importance of Vaastu Shastra",
         link: "/vaastu#whyIsVaastuImp",
       },
       {
@@ -505,22 +518,22 @@ export const JOBS_DATA = [
     postTime: "1 week ago",
     openings: "2",
   },
-  {
-    position: "Postition",
-    location: "Location",
-    experience: "1-3 Years",
-    ctc: "Not Disclosed",
-    postTime: "1 week ago",
-    openings: "2",
-  },
-  {
-    position: "Postition",
-    location: "Location",
-    experience: "1-3 Years",
-    ctc: "Not Disclosed",
-    postTime: "1 week ago",
-    openings: "2",
-  },
+  // {
+  // position: "Postition",
+  // location: "Location",
+  // experience: "1-3 Years",
+  // ctc: "Not Disclosed",
+  // postTime: "1 week ago",
+  // openings: "2",
+  // },
+  // {
+  // position: "Postition",
+  // location: "Location",
+  // experience: "1-3 Years",
+  // ctc: "Not Disclosed",
+  // postTime: "1 week ago",
+  // openings: "2",
+  // },
 ];
 
 export const WHAT_IS_VAASTU_SHASTRA = [
@@ -532,14 +545,14 @@ export const WHAT_IS_VAASTU_SHASTRA = [
 
 export const WHY_IS_VAASTU_IMPORTANT = [
   {
-    icon: HomeIcon,
+    icon: FortuneIcon,
     title: "Bringing in good fortune",
     description:
       "Vaastu-compliant designs are believed to promote financial stability and abundance.",
     info: [],
   },
   {
-    icon: HomeIcon,
+    icon: PositivityIcon,
     title: "Spreads positivity",
     description:
       "Vaastu-compliant spaces are thought to exude positive vibes and a sense of balance and harmony.",
@@ -547,20 +560,20 @@ export const WHY_IS_VAASTU_IMPORTANT = [
   },
 
   {
-    icon: HomeIcon,
+    icon: EnergyIcon,
     title: "Harmonizing energies",
     description:
       "Maximizing natural light and ventilation is another aspect of harmonizing energies in Vaastu Shastra. Ample sunlight and fresh air are thought to invigorate the space and promote a positive atmosphere.",
     info: [],
   },
   {
-    icon: HomeIcon,
+    icon: ObstacleIcon,
     title: "Removal of Obstacles",
     description: `Vaastu Shastra offers remedies for addressing negative influences or obstacles within a property. By making adjustments or enhancements based on Vaastu principles, it's believed that obstacles can be removed, allowing for smoother progress and greater success in various aspects of life.`,
     info: [],
   },
   {
-    icon: HomeIcon,
+    icon: HealthIcon,
     title: "Health and Happiness",
     description:
       "Vaastu principles include guidelines for creating spaces that support physical and mental well-being. A healthy and harmonious living environment is believed to contribute to overall happiness.",
@@ -844,13 +857,13 @@ export const CONTACT_US = [
   {
     icon: WhatsappIcon,
     heading: "Whatsapp",
-    info: "+91 985000477",
+    info: "+91 9850004775",
     link: "",
   },
   {
     icon: PhoneIcon,
     heading: "Phone Call",
-    info: "+91 985000477",
+    info: "+91 9850004775",
     link: "",
   },
   {
@@ -999,24 +1012,6 @@ export const RESIDENTIAL_PROPERTIES_CAROUSEL = [
     name: "2-bhk",
   },
   {
-    image: "/assets/images/1bhk-slide.png",
-
-    name: "1-bhk",
-  },
-  {
-    image: "/assets/images/2bhk-slide.png",
-    name: "2-bhk",
-  },
-  {
-    image: "/assets/images/1bhk-slide.png",
-
-    name: "1-bhk",
-  },
-  {
-    image: "/assets/images/2bhk-slide.png",
-    name: "2-bhk",
-  },
-  {
     image: "/assets/images/3bhk-slide.png",
     name: "3-bhk",
   },
@@ -1032,15 +1027,15 @@ export const RESIDENTIAL_PROPERTIES_CAROUSEL = [
 
 export const SearchDropdown = [
   {
-    name: "1 BHK Flat / Simplex",
+    name: "1 BHK Flat",
     link: "/properties#residentialProperties",
   },
   {
-    name: "2 BHK Flat / Simplex",
+    name: "2 BHK Flat",
     link: "/properties#residentialProperties",
   },
   {
-    name: "3 BHK Flat / Simplex",
+    name: "3 BHK Flat",
     link: "/properties#residentialProperties",
   },
   {
@@ -1048,19 +1043,19 @@ export const SearchDropdown = [
     link: "/properties#residentialProperties",
   },
   {
-    name: "Flats / Residential Property",
+    name: "Flats",
     link: "/properties#residentialProperties",
   },
   {
-    name: "Shops / Commercial property",
+    name: "Shops",
     link: "/properties#commercialProperties",
   },
   {
-    name: "Clinics / Commercial property",
+    name: "Clinics",
     link: "/properties#commercialProperties",
   },
   {
-    name: "Showroom / Commercial property",
+    name: "Showroom",
     link: "/properties#commercialProperties",
   },
   {
@@ -1068,7 +1063,7 @@ export const SearchDropdown = [
     link: "/properties#commercialProperties",
   },
   {
-    name: "Developer plots / Non Agricultural Plots",
+    name: "Developer plots",
     link: "/properties#developerUnits",
   },
   {
@@ -1103,10 +1098,10 @@ export const MENU_DROPDOWN_LINKS = [
         name: "Non-Agricultural plots",
         link: "/properties/#developerUnits",
       },
-      {
-        name: "Developer Units",
-        link: "/properties/#developerUnits",
-      },
+      // {
+      // name: "Developer Units",
+      // link: "/properties/#developerUnits",
+      // },
     ],
   },
   {
@@ -1217,10 +1212,10 @@ export const BANKS_DATA: {
 } = {
   lowestInterest: [
     {
-      image: "/assets/images/banks/bob.png",
-      name: "Bank of Baroda Regular",
-      interestRate: "8.45%",
-      tenure: "30",
+      image: "/assets/images/banks/kotak.png",
+      name: "Kotak Home Loan",
+      interestRate: "8.75%",
+      tenure: "25",
     },
     {
       image: "/assets/images/banks/icici.png",
@@ -1233,12 +1228,6 @@ export const BANKS_DATA: {
       name: "Bank of Maharashtra ",
       interestRate: "8.7%",
       tenure: "30",
-    },
-    {
-      image: "/assets/images/banks/kotak.png",
-      name: "Kotak Home Loan",
-      interestRate: "8.75%",
-      tenure: "25",
     },
     {
       image: "/assets/images/banks/axis.png",
@@ -1350,12 +1339,6 @@ export const BANKS_DATA: {
       image: "/assets/images/banks/hdfc.png",
       name: "HDFC Regular Home Loan",
       interestRate: "8.7%",
-      tenure: "30",
-    },
-    {
-      image: "/assets/images/banks/godrej.png",
-      name: "Godrej Finance Regular",
-      interestRate: "8.64%",
       tenure: "30",
     },
   ],
@@ -1535,6 +1518,6 @@ export const READ_MORE_HOME_LOAN = [
     icon: ZeroFeesIcon,
     heading: "0% Fees",
     subHeading:
-      "Get Home Loan Services from XTRABRICKS without paying any fees.",
+      "Get Home Loan Services from XTRABRICK without paying any fees.",
   },
 ];

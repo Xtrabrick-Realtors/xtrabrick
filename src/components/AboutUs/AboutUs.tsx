@@ -6,9 +6,8 @@ import {
   RightWrapper,
   AboutUsHeading,
   XtraBrickRealtors,
-  ExperienceText,
-  AddressText,
   BackgroundImage,
+  AddressText,
 } from "./AboutUs.styles";
 import { animated, useSpring } from "react-spring";
 import { useInView } from "react-intersection-observer";
@@ -49,12 +48,8 @@ const AboutUs: React.FC = () => {
         <div>
           <AboutUsHeading>About Us</AboutUsHeading>
           <XtraBrickRealtors>XTRABRICK REALTORS</XtraBrickRealtors>
-          <ExperienceText color="#20B2FF" isBold>
-            20 +
-          </ExperienceText>
-          <ExperienceText color="#ffffff" isBold>
-            Years of Experience
-          </ExperienceText>
+          {/* <ExperienceText color="#20B2FF" isBold>20 +</ExperienceText>
+ <ExperienceText color="#ffffff" isBold>Years of Experience</ExperienceText> */}
         </div>
         <AddressText>
           Office No. 45, Vision One Mall, Bhumkar Chowk, <br />

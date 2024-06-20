@@ -19,11 +19,13 @@ interface VaastuDetailsContainerProps {
     info?: string[];
   }[];
   columns?: number;
+  removeOutline?: boolean;
 }
 
 const VaastuDetailsContainer: React.FC<VaastuDetailsContainerProps> = ({
   data,
   columns = 2,
+  removeOutline = false,
 }) => {
   const AnimatedContainer = animated(Container);
   const [ref, inView] = useInView({
@@ -35,7 +37,12 @@ const VaastuDetailsContainer: React.FC<VaastuDetailsContainerProps> = ({
     transform: inView ? "translateY(0)" : "translateY(150px)",
   });
   return (
-    <AnimatedContainer columns={columns} ref={ref} style={animation}>
+    <AnimatedContainer
+      columns={columns}
+      ref={ref}
+      style={animation}
+      removeOutline={removeOutline}
+    >
       {data?.map((item, index) => (
         <ItemContainer key={index} columns={columns}>
           <ItemHeader>

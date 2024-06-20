@@ -6,7 +6,7 @@ export const PropertiesWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 89px;
+  margin-top: 70px;
 `;
 
 export const BannerWrapper = styled.div`

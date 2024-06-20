@@ -5,8 +5,9 @@ export const TestimonialWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
+  width: 100%;
   margin-top: 35px;
   @media (max-width: 767px) {
-    display: none;
+    /* display: none; */
   }
 `;

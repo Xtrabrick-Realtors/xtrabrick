@@ -78,7 +78,7 @@ const Properties = () => {
       <Header activeTab="Properties" />
       <AnimatedBannerWrapper ref={ref} style={animation}>
         <Image
-          src={"/assets/images/propertiesBanner.png"}
+          src={"/assets/images/propertiesBanner.jpg"}
           alt={"Properties"}
           layout={"responsive"}
           objectFit={"cover"}

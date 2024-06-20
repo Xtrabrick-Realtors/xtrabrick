@@ -1,5 +1,3 @@
-// Career.styles.ts
-
 import { theme } from "@/constants/basetheme";
 import styled from "styled-components";
 
@@ -8,10 +6,10 @@ export const CareerContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 89px;
+  margin-top: 70px;
 
   @media screen and (max-width: 768px) {
-    margin-top: 50px; // Adjust margin for smaller screens
+    margin-top: 50px;
   }
 `;
 
@@ -35,10 +33,10 @@ export const FilterContainer = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    flex: 1; // Change flex to take full width on smaller screens
-    margin-bottom: 20px; // Add margin to create space between filters and job cards
-    border-radius: 0; // Remove border radius to match job card layout
-    padding: 20px; // Adjust padding for smaller screens
+    flex: 1; 
+    margin-bottom: 20px;
+    border-radius: 0;
+    padding: 20px;
   }
 `;
 
@@ -49,7 +47,7 @@ export const FilterCategory = styled.p`
   margin: 15px 0;
 
   @media screen and (max-width: 768px) {
-    margin: 10px 0; // Adjust margin for smaller screens
+    margin: 10px 0;
   }
 `;
 
@@ -61,7 +59,7 @@ export const FilterItem = styled.p`
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
-    margin: 10px 0; // Adjust margin for smaller screens
+    margin: 10px 0;
   }
 `;
 
@@ -74,7 +72,7 @@ export const JobContainer = styled.div`
   overflow-y: auto;
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr; // Change to single column layout for smaller screens
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -89,15 +87,15 @@ export const JobCard = styled.div`
   padding: 10px 20px;
 
   @media screen and (max-width: 768px) {
-    width: 100%; // Adjust width for smaller screens
-    max-width: 400px; // Limit maximum width for smaller screens
-    margin: 0 auto; // Center align job cards on smaller screens
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 `;
 
 export const JobsWrapper = styled.div`
   display: flex;
-  height: 567px;
+  height: 650px;
   width: 100%;
   padding: 40px;
 
@@ -108,9 +106,9 @@ export const JobsWrapper = styled.div`
 `;
 
 export const JobsListingWrapper = styled.div`
-  flex: 0.75;
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 20px;
   overflow-y: auto;

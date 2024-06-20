@@ -172,7 +172,7 @@ const Loan: React.FC = () => {
       <Header activeTab="Loan Services" />
       <AnimatedBannerWrapper ref={ref} style={animation}>
         <Image
-          src="/assets/images/loanPage.png"
+          src="/assets/images/loanPage.jpg"
           alt="Loan Services"
           layout="responsive"
           objectFit="cover"
@@ -285,7 +285,7 @@ const Loan: React.FC = () => {
               />
             </CalculatorInput>
           </CalculatorInputGroup>
-          <CalculatorInput width="100%">
+          <CalculatorInput width="90%">
             <p>Loan Tenure (Years)</p>
             <input
               type="text"
@@ -325,7 +325,7 @@ const Loan: React.FC = () => {
           </SummaryContainer>
         </CalculatorContainer>
         <Image
-          src="/assets/images/emiCalculator.png"
+          src="/assets/images/emiCalculator.jpg"
           alt="emi calculator"
           height={344}
           width={519}
@@ -338,6 +338,31 @@ const Loan: React.FC = () => {
         {TOP_ASKED_QUESTIONS?.map((item, index) => (
           <QuestionCard key={index} onClick={() => handleQuestionClick(item)}>
             <p>{item.question}</p>
+            {/* Read more button */}
+            <div
+              style={{
+                position: "absolute",
+                bottom: 10,
+                right: 10,
+                backgroundColor: "#0173B0",
+                borderRadius: 15,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: 24,
+                width: 75,
+              }}
+            >
+              <p
+                style={{
+                  fontSize: 8,
+                  fontFamily: theme.fonts.lato,
+                  color: theme.colors.white,
+                }}
+              >
+                Read More
+              </p>
+            </div>
           </QuestionCard>
         ))}
       </QuestionsWrapper>

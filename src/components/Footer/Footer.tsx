@@ -16,9 +16,13 @@ import {
   FixedFooterForm,
   FixedFooterInput,
   FixedFooterButton,
+  EnquireButton,
+  EnquireButtonText,
+  CrossIconWrapper,
 } from "./Footer.styles";
 import { CONTACT_INFO, FOOTER_LINKS, SOCIAL_LINKS } from "@/constants";
 import { theme } from "@/constants/basetheme";
+import CrossIcon from "../../../public/assets/svg/CrossIcon";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +30,7 @@ const Footer = () => {
     email: "",
     phone: "",
   });
-
+  const [open, setOpen] = useState<boolean>(false);
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -60,7 +64,7 @@ const Footer = () => {
   };
 
   return (
-    <FooterContainer>
+    <FooterContainer isOpen={open}>
       <ContentWrapper>
         <LinksWrapper>
           {FOOTER_LINKS.map((item, index) => (
@@ -125,35 +129,53 @@ const Footer = () => {
           2022 © xtrabrick. All rights reserved by VIGHNAHATRA AND COMPANY
         </CopyrightText>
       </CopyrightWrapper>
-      <FixedFooterContainer>
-        <FixedFooterText>
-          Do we have everything you&apos;re looking for?
-        </FixedFooterText>
-        <FixedFooterForm onSubmit={handleSubmit}>
-          <FixedFooterInput
-            type="text"
-            placeholder="Enter Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          <FixedFooterInput
-            type="email"
-            placeholder="Enter Email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          <FixedFooterInput
-            type="tel"
-            placeholder="Enter Phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          <FixedFooterButton type="submit">Get a Call Back</FixedFooterButton>
-        </FixedFooterForm>
-      </FixedFooterContainer>
+      {/* fixed bottom bar */}
+      {!open ? (
+        <EnquireButton
+          onClick={() => {
+            setOpen(true);
+          }}
+        >
+          <EnquireButtonText>Enquire Now</EnquireButtonText>
+        </EnquireButton>
+      ) : (
+        <FixedFooterContainer isOpen={open}>
+          <CrossIconWrapper
+            onClick={() => {
+              setOpen(false);
+            }}
+          >
+            <CrossIcon />
+          </CrossIconWrapper>
+          <FixedFooterText>
+            Do we have everything you&apos;re looking for?
+          </FixedFooterText>
+          <FixedFooterForm onSubmit={handleSubmit}>
+            <FixedFooterInput
+              type="text"
+              placeholder="Enter Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <FixedFooterInput
+              type="email"
+              placeholder="Enter Email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <FixedFooterInput
+              type="tel"
+              placeholder="Enter Phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            <FixedFooterButton type="submit">Get a Call Back</FixedFooterButton>
+          </FixedFooterForm>
+        </FixedFooterContainer>
+      )}
     </FooterContainer>
   );
 };

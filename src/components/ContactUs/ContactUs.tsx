@@ -49,7 +49,7 @@ const ContactUs = () => {
 
     const result = await response.json();
     if (response.ok) {
-      alert('Enquiry Submitted Successfully')
+      alert("Enquiry Submitted Successfully");
       setFormData({
         name: "",
         phone: "",
@@ -58,7 +58,7 @@ const ContactUs = () => {
         message: "",
       });
     } else {
-    alert('Enquiry Submission failed, Please try again!')
+      alert("Enquiry Submission failed, Please try again!");
     }
   };
 
@@ -66,7 +66,7 @@ const ContactUs = () => {
     <Container>
       <Header activeTab="Contact Us" />
       <Image
-        src={"/assets/images/contactUsBanner.png"}
+        src={"/assets/images/contactUsBanner.jpg"}
         alt={"About Us"}
         layout={"responsive"}
         objectFit={"cover"}
@@ -76,7 +76,6 @@ const ContactUs = () => {
       />
       <CustomHeading heading="Enquiry Form" />
       <ContentWrapper>
-     
         <LeftWrapper>
           <InfoText>
             Get in touch to schedule a visit to your new house. Kindly fill this
@@ -115,26 +114,16 @@ const ContactUs = () => {
               onChange={handleChange}
             >
               <option value="">Select Inquiry Type</option>
-              <option value="1 BHK Flat / Simplex">1 BHK Flat / Simplex</option>
-              <option value="2 BHK Flat / Simplex">2 BHK Flat / Simplex</option>
-              <option value="3 BHK Flat / Simplex">3 BHK Flat / Simplex</option>
+              <option value="1 BHK Flat">1 BHK Flat</option>
+              <option value="2 BHK Flat">2 BHK Flat</option>
+              <option value="3 BHK Flat">3 BHK Flat</option>
               <option value="Duplex">Duplex</option>
-              <option value="Flats / Residential Property">
-                Flats / Residential Property
-              </option>
-              <option value="Shops / Commercial property">
-                Shops / Commercial property
-              </option>
-              <option value="Clinics / Commercial property">
-                Clinics / Commercial property
-              </option>
-              <option value="Showroom / Commercial property">
-                Showroom / Commercial property
-              </option>
+              <option value="Flats">Flats</option>
+              <option value="Shops">Shops</option>
+              <option value="Clinics">Clinics</option>
+              <option value="Showroom">Showroom</option>
               <option value="Commercial property">Commercial property</option>
-              <option value="Developer plots / Non Agricultural Plots">
-                Developer plots / Non Agricultural Plots
-              </option>
+              <option value="Developer plots">Developer plots</option>
               <option value="Loan Services">Loan Services</option>
               <option value="Vaastu Shastra Consultation">
                 Vaastu Shastra Consultation

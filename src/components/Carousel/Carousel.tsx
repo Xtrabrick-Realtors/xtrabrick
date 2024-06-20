@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { EmblaOptionsType } from "embla-carousel";
-import { PrevButton, NextButton, usePrevNextButtons } from "./CarouselArrowButtons";
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons,
+} from "./CarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { ButtonWrapper, CarouselContainer, CarouselItem, CarouselItemContainer, CarouselWrapper } from "./Carousel.styles";
+import {
+  ButtonWrapper,
+  CarouselContainer,
+  CarouselItem,
+  CarouselItemContainer,
+  CarouselWrapper,
+} from "./Carousel.styles";
 import PaginationDots from "./PaginationDots"; // Import the PaginationDots component
 
 type PropType = {
@@ -28,11 +38,11 @@ const Carousel: React.FC<PropType> = (props) => {
     showControls = false,
     slidesToShow = 1,
     showBottomDots = false,
-    autoplayOnHover = false // Default to false
+    autoplayOnHover = false,
   } = props;
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false); // State to track hover
+  const [isHovered, setIsHovered] = useState(false);
 
   const emblaOptions: EmblaOptionsType = {
     ...options,
@@ -42,7 +52,15 @@ const Carousel: React.FC<PropType> = (props) => {
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     emblaOptions,
-    autoPlay ? [Autoplay({ stopOnLastSnap, stopOnInteraction, delay: autoplayOnHover ? 1500 : 4000})] : []
+    autoPlay
+      ? [
+          Autoplay({
+            stopOnLastSnap,
+            stopOnInteraction,
+            delay: autoplayOnHover ? 1500 : 4000,
+          }),
+        ]
+      : []
   );
 
   useEffect(() => {
@@ -57,20 +75,27 @@ const Carousel: React.FC<PropType> = (props) => {
       setActiveIndex(emblaApi.selectedScrollSnap());
     };
     emblaApi.on("select", onSelect);
-    return () => {emblaApi && emblaApi.off("select", onSelect)};
+    return () => {
+      emblaApi && emblaApi.off("select", onSelect);
+    };
   }, [emblaApi]);
 
-  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
   useEffect(() => {
-    const autoplayPlugin = emblaApi?.plugins()?.autoplay
-    if (!autoplayPlugin) return
+    const autoplayPlugin = emblaApi?.plugins()?.autoplay;
+    if (!autoplayPlugin) return;
     if (autoplayOnHover && autoPlay && emblaApi && autoplayPlugin) {
       if (isHovered) {
-        console.log(isHovered, 'isHovered')
-        autoplayPlugin.play()
+        console.log(isHovered, "isHovered");
+        autoplayPlugin.play();
       } else {
-        autoplayPlugin.stop()
+        autoplayPlugin.stop();
       }
     }
   }, [autoPlay, emblaApi, isHovered, autoplayOnHover]);
@@ -81,7 +106,10 @@ const Carousel: React.FC<PropType> = (props) => {
       onMouseLeave={() => autoplayOnHover && setIsHovered(false)}
     >
       <CarouselWrapper className="embla__viewport" ref={emblaRef}>
-        <CarouselItemContainer className="embla__container" slidesToShow={slidesToShow}>
+        <CarouselItemContainer
+          className="embla__container"
+          slidesToShow={slidesToShow}
+        >
           {React.Children.map(children, (child) => (
             <CarouselItem className="embla__slide" slidesToShow={slidesToShow}>
               {child}
@@ -97,12 +125,28 @@ const Carousel: React.FC<PropType> = (props) => {
       </CarouselWrapper>
       {showControls && (
         <ButtonWrapper className="embla__controls">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          {!prevBtnDisabled && (
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
+            />
+          )}
+          {!nextBtnDisabled && (
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
+          )}
         </ButtonWrapper>
       )}
       {/* Render pagination dots */}
-      {showBottomDots &&  <PaginationDots totalSlides={Math.ceil(React.Children.count(children) / slidesToShow)} activeIndex={activeIndex} onClick={(index) => emblaApi?.scrollTo(index)} />}
+      {showBottomDots && (
+        <PaginationDots
+          totalSlides={Math.ceil(React.Children.count(children) / slidesToShow)}
+          activeIndex={activeIndex}
+          onClick={(index) => emblaApi?.scrollTo(index)}
+        />
+      )}
     </CarouselContainer>
   );
 };

@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 89px;
+  margin-top: 70px;
 `;
 
 export const ContentWrapper = styled.div`
@@ -26,10 +26,10 @@ export const LeftWrapper = styled.div`
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   height: 100%;
-  padding: 40px;
+  padding: 30px;
 
   @media (max-width: 767px) {
-    padding: 20px;
+    padding: 15px;
   }
 `;
 
@@ -38,7 +38,7 @@ export const InfoText = styled.p`
   font-family: ${theme.fonts.lato};
   font-weight: 400;
   color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 
   @media (max-width: 767px) {
     font-size: 16px;
@@ -66,7 +66,7 @@ export const Form = styled.form`
   & > div > input {
     flex: 0.48;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 40px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin: 20px 0;
 
@@ -80,9 +80,9 @@ export const Form = styled.form`
 export const Input = styled.input`
   width: 100%;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 30px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin: 20px 0;
+  margin: 5px 0px;
 
   @media (max-width: 767px) {
     margin: 10px 0;
@@ -91,7 +91,7 @@ export const Input = styled.input`
 
 export const Select = styled.select`
   width: 100%;
-  border-radius: 15px;
+  border-radius: 30px;
   padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin: 20px 0;
@@ -103,9 +103,9 @@ export const Select = styled.select`
 
 export const Textarea = styled.textarea`
   width: 100%;
-  border-radius: 15px;
+  border-radius: 30px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 20px;
 
   @media (max-width: 767px) {
@@ -121,6 +121,7 @@ export const Button = styled.button`
   padding: 12px 30px;
   color: ${theme.colors.white};
   cursor: pointer;
+  margin-top: 5px;
 `;
 
 export const RightWrapper = styled.div`
@@ -140,10 +141,10 @@ export const ContactInfoCard = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   padding: 10px 20px;
-  margin-bottom: 100px;
+  margin-bottom: 25px;
 
   @media (max-width: 767px) {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 `;
 

@@ -6,27 +6,31 @@ import { RESIDENTIAL_PROPERTIES_CAROUSEL } from "@/constants";
 import useIsMobile from "@/hooks/useIsMobile";
 
 const ResidentialPropertiesCarousel: React.FC = () => {
-  const OPTIONS: EmblaOptionsType = {}
+  const OPTIONS: EmblaOptionsType = {};
   const isMobile = useIsMobile();
   return (
-    <Carousel options={OPTIONS} showControls slidesToShow={2} showBottomDots >
+    <Carousel options={OPTIONS} showControls showBottomDots>
       {RESIDENTIAL_PROPERTIES_CAROUSEL?.map((item, index) => (
         <div
           style={{
-            width: isMobile ? '95vw' : "80vw",
-            minHeight: isMobile ? '150px' : "414px",
-            
+            width: "100vw",
+            minHeight: isMobile ? "150px" : "414px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
           key={index}
         >
-        <Image
-          alt={item.name}
-          src={item.image}
-          layout="responsive"
-          width={1920}
-          height={1080}
-          loading={'eager'}
-        />
+          <div style={{ width: isMobile ? "90%" : "75%" }}>
+            <Image
+              alt={item.name}
+              src={item.image}
+              layout="responsive"
+              width={1920}
+              height={1080}
+              loading={"eager"}
+            />
+          </div>
         </div>
       ))}
     </Carousel>

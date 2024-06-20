@@ -15,10 +15,10 @@ const Vastu = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: '89px'
+        marginTop: "70px",
       }}
     >
-      <Header activeTab="Vaastu"/>
+      <Header activeTab="Vaastu Shastra" />
       <div
         style={{
           width: "100%",
@@ -36,11 +36,14 @@ const Vastu = () => {
       </div>
 
       <WhatIsVaastuShastra />
-      <CustomHeading heading="Why is Vaastu Important?" id="whyIsVaastuImp"/> 
-      <VaastuDetailsContainer data={WHY_IS_VAASTU_IMPORTANT} />
-      
-      <CustomHeading heading="Key Principles" id="keyPrinciples"/> 
-      <VaastuDetailsContainer data={KEY_PRINCIPLES} />
+      <CustomHeading
+        heading="Why is Vaastu Shastra Important?"
+        id="whyIsVaastuImp"
+      />
+      <VaastuDetailsContainer data={WHY_IS_VAASTU_IMPORTANT} removeOutline />
+
+      <CustomHeading heading="Key Principles" id="keyPrinciples" />
+      <VaastuDetailsContainer data={KEY_PRINCIPLES} removeOutline />
       <Footer />
     </div>
   );

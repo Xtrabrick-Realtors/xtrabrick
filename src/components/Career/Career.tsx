@@ -17,10 +17,10 @@ const Career = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: '89px'
+        marginTop: "70px",
       }}
     >
-      <Header activeTab="Careers"/>
+      <Header activeTab="Carrers" />
       <div
         style={{
           width: "100%",
@@ -37,108 +37,106 @@ const Career = () => {
         />
       </div>
       {/* second fold */}
-      <JobsWrapper
-      >
+      <JobsWrapper>
         {/* left */}
-        <div
-          style={{
-            flex: 0.25,
-            backgroundColor: "#F4F4F4",
-            borderRadius: 20,
-            display: "flex",
-            flexDirection: "column",
-            padding: "30px 20px 30px",
-          }}
-        >
-          <h2
-            style={{
-               fontFamily: theme.fonts.lato,
-              fontSize: "22px",
-              fontWeight: 700,
-            }}
-          >
-            Filter By
-          </h2>
-          {FILTER_DATA.map((item, index) => {
-            return (
-              <div key={index}>
-                <p
-                  style={{
-                     fontFamily: theme.fonts.lato,
-                    fontSize: "20px",
-                    fontWeight: 700,
-                    margin: "15px 0",
-                  }}
-                >
-                  {item.category}
-                </p>
-                {item.filters?.map((filter, i) => {
-                  return (
-                    <p
-                      style={{
-                         fontFamily: theme.fonts.lato,
-                        fontSize: "18px",
-                        fontWeight: 400,
-                        margin: "15px 0",
-                        cursor: "pointer",
-                      }}
-                      key={i}
-                    >
-                      {filter}
-                    </p>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
+        {/* <div
+ style={{
+ flex: 0.25,
+ backgroundColor: "#F4F4F4",
+ borderRadius: 20,
+ display: "flex",
+ flexDirection: "column",
+ padding: "30px 20px 30px",
+ }}
+ >
+ <h2
+ style={{
+ fontFamily: theme.fonts.lato,
+ fontSize: "22px",
+ fontWeight: 700,
+ }}
+ >
+ Filter By
+ </h2>
+ {FILTER_DATA.map((item, index) => {
+ return (
+ <div key={index}>
+ <p
+ style={{
+ fontFamily: theme.fonts.lato,
+ fontSize: "20px",
+ fontWeight: 700,
+ margin: "15px 0",
+ }}
+ >
+ {item.category}
+ </p>
+ {item.filters?.map((filter, i) => {
+ return (
+ <p
+ style={{
+ fontFamily: theme.fonts.lato,
+ fontSize: "18px",
+ fontWeight: 400,
+ margin: "15px 0",
+ cursor: "pointer",
+ }}
+ key={i}
+ >
+ {filter}
+ </p>
+ );
+ })}
+ </div>
+ );
+ })}
+ </div> */}
 
         {/* right */}
-        <JobsListingWrapper
-          
-        >
+        <JobsListingWrapper>
           {JOBS_DATA.map((job, index) => {
             return (
-              <Job
-                key={index}
-                
-              >
+              <Job key={index}>
                 <h2
                   style={{
-                     fontFamily: theme.fonts.lato,
+                    fontFamily: theme.fonts.lato,
                     fontWeight: 700,
                     fontSize: "22px",
                   }}
                 >
                   {job?.position}
                 </h2>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',                    
-                }}>
-                    <LocationIcon height={20} width={15}/>
-                  
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <LocationIcon height={20} width={15} />
+
                   <p
                     style={{
-                       fontFamily: theme.fonts.lato,
+                      fontFamily: theme.fonts.lato,
                       fontWeight: 400,
                       fontSize: "18px",
                       color: "#434343",
-                      marginLeft: '5px',
+                      marginLeft: "5px",
                     }}
                   >
                     {job?.location}
                   </p>
                 </div>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',   
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
                     gap: 5,
-                }}>
+                  }}
+                >
                   <JobIcon />
                   <p
                     style={{
-                       fontFamily: theme.fonts.lato,
+                      fontFamily: theme.fonts.lato,
                       fontWeight: 400,
                       fontSize: "18px",
                       color: "#434343",
@@ -147,19 +145,20 @@ const Career = () => {
                     {job?.experience}
                   </p>
                 </div>
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 10,                    
-                }}>
-                 <RupeeIcon />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                  }}
+                >
+                  <RupeeIcon />
                   <p
                     style={{
-                       fontFamily: theme.fonts.lato,
+                      fontFamily: theme.fonts.lato,
                       fontWeight: 400,
                       fontSize: "18px",
                       color: "#434343",
-                    
                     }}
                   >
                     {job?.ctc}
@@ -171,7 +170,7 @@ const Career = () => {
                   <div>
                     <p
                       style={{
-                         fontFamily: theme.fonts.lato,
+                        fontFamily: theme.fonts.lato,
                         fontWeight: 400,
                         fontSize: "16px",
                         color: "#434343",
@@ -181,7 +180,7 @@ const Career = () => {
                     </p>
                     <p
                       style={{
-                         fontFamily: theme.fonts.lato,
+                        fontFamily: theme.fonts.lato,
                         fontWeight: 400,
                         fontSize: "16px",
                         color: "#434343",
@@ -205,7 +204,7 @@ const Career = () => {
                   >
                     <p
                       style={{
-                         fontFamily: theme.fonts.lato,
+                        fontFamily: theme.fonts.lato,
                         fontWeight: 400,
                         fontSize: 16,
                         color: theme.colors.white,

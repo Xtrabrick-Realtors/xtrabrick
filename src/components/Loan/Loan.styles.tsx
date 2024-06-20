@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 89px;
+  margin-top: 70px;
 `;
 
 export const BankingPartnersWrapper = styled.div`
@@ -108,7 +108,7 @@ export const CalculatorWrapper = styled.div`
 
 export const CalculatorContainer = styled.div`
   width: 90%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   min-height: 350px;
   display: flex;
@@ -150,17 +150,17 @@ export const CalculatorText = styled.p`
   font-size: 18px;
   font-weight: 400;
   font-family: ${theme.fonts.lato};
-  width: 100%;
-  margin-top: 45px;
+  width: 90%;
+  margin-top: 30px;
 `;
 
 export const CalculatorInputGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin-top: 45px;
-  margin-bottom: 25px;
+  width: 90%;
+  margin-top: 25px;
+  margin-bottom: 20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -179,16 +179,16 @@ export const CalculatorInput = styled.div<{
     font-size: 16px;
     font-weight: 400;
     font-family: ${theme.fonts.lato};
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   input {
     width: 100%;
     padding: 10px 20px;
     padding-left: ${({ paddingLeft = "20px" }) => paddingLeft};
-    height: 45px;
+    height: 40px;
     border: 1px solid #aebed7;
-    border-radius: 15px;
+    border-radius: 20px;
   }
 
   @media (max-width: 768px) {
@@ -200,20 +200,20 @@ export const CalculatorInput = styled.div<{
 export const SummaryContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-top: 25px;
+  width: 90%;
+  margin-top: 15px;
 
   p {
     font-size: 16px;
     font-weight: 400;
     font-family: ${theme.fonts.lato};
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 `;
 
 export const SummaryGrid = styled.div`
   width: 100%;
-  padding: 30px 20px;
+  padding: 20px 15px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -262,6 +262,7 @@ export const QuestionCard = styled.div`
   width: 414px;
   margin: 0px 25px 25px 0;
   cursor: pointer;
+  position: relative;
 
   p {
     font-size: 22px;
@@ -280,9 +281,9 @@ export const ReadMoreCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 25px;
   border-radius: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #0173b0;
   width: 414px;
   margin: 0px 25px 25px 0;
   cursor: pointer;
@@ -293,6 +294,7 @@ export const ReadMoreCard = styled.div`
     font-family: ${theme.fonts.lato};
     text-align: center;
     letter-spacing: 0.2rem;
+    color: #ffffff;
   }
 
   @media (max-width: 768px) {
