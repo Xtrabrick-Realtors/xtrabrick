@@ -18,7 +18,7 @@ export const FooterContainer = styled.div<{ isOpen?: boolean }>`
   @media (max-width: 767px) {
     padding-top: 30px;
     margin-top: 30px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 `;
 

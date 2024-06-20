@@ -23,6 +23,7 @@ import {
 import { CONTACT_INFO, FOOTER_LINKS, SOCIAL_LINKS } from "@/constants";
 import { theme } from "@/constants/basetheme";
 import CrossIcon from "../../../public/assets/svg/CrossIcon";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,7 @@ const Footer = () => {
     phone: "",
   });
   const [open, setOpen] = useState<boolean>(false);
+  const isMobile = useIsMobile();
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -64,7 +66,7 @@ const Footer = () => {
   };
 
   return (
-    <FooterContainer isOpen={open}>
+    <FooterContainer isOpen={open && !isMobile}>
       <ContentWrapper>
         <LinksWrapper>
           {FOOTER_LINKS.map((item, index) => (
@@ -130,7 +132,7 @@ const Footer = () => {
         </CopyrightText>
       </CopyrightWrapper>
       {/* fixed bottom bar */}
-      {!open ? (
+      {!open && !isMobile ? (
         <EnquireButton
           onClick={() => {
             setOpen(true);
@@ -140,13 +142,16 @@ const Footer = () => {
         </EnquireButton>
       ) : (
         <FixedFooterContainer isOpen={open}>
-          <CrossIconWrapper
-            onClick={() => {
-              setOpen(false);
-            }}
-          >
-            <CrossIcon />
-          </CrossIconWrapper>
+          {!isMobile && (
+            <CrossIconWrapper
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CrossIcon />
+            </CrossIconWrapper>
+          )}
+
           <FixedFooterText>
             Do we have everything you&apos;re looking for?
           </FixedFooterText>
