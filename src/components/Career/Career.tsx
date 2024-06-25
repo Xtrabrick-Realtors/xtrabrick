@@ -168,7 +168,7 @@ const Career = () => {
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
                   <div>
-                    <p
+                    {/* {job?.postTime && <p
                       style={{
                         fontFamily: theme.fonts.lato,
                         fontWeight: 400,
@@ -177,7 +177,8 @@ const Career = () => {
                       }}
                     >
                       Poster: {job?.postTime}
-                    </p>
+                    </p>} */}
+                    
                     <p
                       style={{
                         fontFamily: theme.fonts.lato,

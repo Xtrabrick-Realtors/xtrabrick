@@ -95,7 +95,7 @@ export const JobCard = styled.div`
 
 export const JobsWrapper = styled.div`
   display: flex;
-  height: 650px;
+  // height: 650px;
   width: 100%;
   padding: 40px;
 
