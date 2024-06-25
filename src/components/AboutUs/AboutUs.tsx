@@ -23,7 +23,7 @@ const AboutUs: React.FC = () => {
     transform: inView ? "translateY(0)" : "translateY(150px)",
   });
   return (
-    <AnimatedContainer id="aboutUs" style={animation} ref={ref}>
+    <AnimatedContainer style={animation} ref={ref}>
       <BackgroundImage>
         <Image
           src="/assets/images/aboutUsBg.png"

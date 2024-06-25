@@ -39,8 +39,8 @@ const Home = () => {
         <PropertyCategories />
         <Locations />
         <AboutUs />
-        <WhatIsXtraBrick />
         <WhoAreWe />
+        <WhatIsXtraBrick />
         <OurTeam />
         <Testimonials />
         <VisitUs />

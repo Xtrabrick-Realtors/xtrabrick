@@ -99,7 +99,7 @@ export const HEADER_ITEMS = [
 
 export const PROMOTIONAL_BANNER_ITEMS = [
   {
-    image: "/assets/images/CommercialProperties-v2.png",
+    image: "/assets/images/CommercialProperties-v3.jpg",
     name: "Commercial Properties",
   },
   {
@@ -190,16 +190,16 @@ export const PROPERTY_CATEGORIES = [
 ];
 
 export const LOCATIONS = [
-  "/assets/images/locations/balewadi.png",
-  "/assets/images/locations/baner.png",
-  "/assets/images/locations/bavdhan.png",
-  "/assets/images/locations/hinjewadi.png",
-  "/assets/images/locations/kiwale.png",
-  "/assets/images/locations/mamurdi.png",
-  "/assets/images/locations/marunji.png",
-  "/assets/images/locations/moshi.png",
-  "/assets/images/locations/nere.png",
-  "/assets/images/locations/sangavade.png",
+  "/assets/images/locations/balewadi.jpg",
+  "/assets/images/locations/baner.jpg",
+  "/assets/images/locations/bavdhan.jpg",
+  "/assets/images/locations/hinjewadi.jpg",
+  "/assets/images/locations/kiwale.jpg",
+  "/assets/images/locations/mamurdi.jpg",
+  "/assets/images/locations/marunji.jpg",
+  "/assets/images/locations/moshi.jpg",
+  "/assets/images/locations/nere.jpg",
+  "/assets/images/locations/sangavade.jpg",
 ];
 
 export const WHAT_IS_EXTRABRICS = [
@@ -376,7 +376,7 @@ export const FOOTER_LINKS = [
     links: [
       {
         name: "Who we are",
-        link: "/#whoAreWe",
+        link: "/#aboutUs",
       },
       {
         name: "Our Team",
@@ -639,10 +639,10 @@ export const PROPERTIES_NAVIGATOR = [
     name: "Developer Plots",
     link: "/properties/#developerUnits",
   },
-  {
-    name: "Location Benefits",
-    link: "/properties/#locationBenefits",
-  },
+  // {
+  //   name: "Location Benefits",
+  //   link: "/properties/#locationBenefits",
+  // },
 ];
 
 export const LOAN_SERVICES_NAVIGATOR = [
@@ -790,66 +790,82 @@ export const COMMERCIAL_PROPERTIES_WIDGET = [
 
 export const RESIDENTIAL_PROPERTIES = [
   {
-    image: "/assets/images/ResidentialProperties/rr1.png",
+    image: "/assets/images/ResidentialProperties/rr1.jpg",
     name: "Resdential Property 1",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr2.png",
+    image: "/assets/images/ResidentialProperties/rr2.jpg",
     name: "Resdential Property 2",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr3.png",
+    image: "/assets/images/ResidentialProperties/rr3.jpg",
     name: "Resdential Property 3",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr4.png",
+    image: "/assets/images/ResidentialProperties/rr4.jpg",
     name: "Resdential Property 4",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr5.png",
+    image: "/assets/images/ResidentialProperties/rr5.jpg",
+    name: "Resdential Property 5",
+  },
+   {
+    image: "/assets/images/ResidentialProperties/rr5.jpg",
     name: "Resdential Property 5",
   },
 ];
 
 export const COMMERCIAL_PROPERTIES = [
   {
-    image: "/assets/images/CommercialProperties/c1.png",
+    image: "/assets/images/CommercialProperties/c1.jpg",
     name: "Commercial Property 1",
   },
   {
-    image: "/assets/images/CommercialProperties/c2.png",
+    image: "/assets/images/CommercialProperties/c2.jpg",
     name: "Commercial Property 2",
   },
   {
-    image: "/assets/images/CommercialProperties/c3.png",
+    image: "/assets/images/CommercialProperties/c3.jpg",
     name: "Commercial Property 3",
   },
   {
-    image: "/assets/images/CommercialProperties/c4.png",
+    image: "/assets/images/CommercialProperties/c4.jpg",
     name: "Commercial Property 4",
   },
   {
-    image: "/assets/images/CommercialProperties/c5.png",
+    image: "/assets/images/CommercialProperties/c5.jpg",
     name: "Commercial Property 5",
   },
   {
-    image: "/assets/images/CommercialProperties/c6.png",
+    image: "/assets/images/CommercialProperties/c6.jpg",
     name: "Commercial Property 6",
+  },
+  {
+    image: "/assets/images/CommercialProperties/c7.jpg",
+    name: "Commercial Property 7",
   },
 ];
 
 export const DEVELOPER_PROPERTIES = [
   {
-    image: "/assets/images/CommercialProperties/d1.png",
+    image: "/assets/images/CommercialProperties/d1.jpg",
     name: "Developer Property 1",
   },
   {
-    image: "/assets/images/CommercialProperties/d2.png",
+    image: "/assets/images/CommercialProperties/d2.jpg",
     name: "Developer Property 2",
   },
   {
-    image: "/assets/images/CommercialProperties/d3.png",
+    image: "/assets/images/CommercialProperties/d3.jpg",
     name: "Developer Property 3",
+  },
+  {
+    image: "/assets/images/CommercialProperties/d4.jpg",
+    name: "Developer Property 4",
+  },
+  {
+    image: "/assets/images/CommercialProperties/d5.jpg",
+    name: "Developer Property 5",
   },
 ];
 
@@ -1003,24 +1019,24 @@ export const CONTACT_US = [
 
 export const RESIDENTIAL_PROPERTIES_CAROUSEL = [
   {
-    image: "/assets/images/1bhk-slide.png",
+    image: "/assets/images/1bhk-slide.jpg",
 
     name: "1-bhk",
   },
   {
-    image: "/assets/images/2bhk-slide.png",
+    image: "/assets/images/2bhk-slide.jpg",
     name: "2-bhk",
   },
   {
-    image: "/assets/images/3bhk-slide.png",
+    image: "/assets/images/3bhk-slide.jpg",
     name: "3-bhk",
   },
   {
-    image: "/assets/images/simplex-slide.png",
+    image: "/assets/images/simplex-slide.jpg",
     name: "simplex",
   },
   {
-    image: "/assets/images/duplex-slide.png",
+    image: "/assets/images/duplex-slide.jpg",
     name: "duplex",
   },
 ];

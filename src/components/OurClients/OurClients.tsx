@@ -22,7 +22,7 @@ const OurClients: React.FC = () => {
 
   return (
     <AnimatedClientsContainer id="ourClients" style={animation} ref={ref}>
-      <CustomHeading heading="Top-tier Real Estate Developers" />
+      <CustomHeading heading="Our Trusted Clients" />
       <ClientsWrapper>
         {CLIENTS_INFO?.map((item, index) => (
           <ClientImageWrapper key={index}>

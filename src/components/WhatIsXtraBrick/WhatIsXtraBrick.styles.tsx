@@ -5,7 +5,7 @@ export const WhatIsXtraBricWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 80%;
-  margin-top: 135px;
+  margin-top: 55px;
 
   & .iconDescription {
     font-size: 22px;

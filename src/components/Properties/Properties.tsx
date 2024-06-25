@@ -97,14 +97,14 @@ const Properties = () => {
         </NavigatorWrapper>
       </AnimatedBannerWrapper>
 
-      <CustomHeading heading="How to book a Property with Xtrabrick" />
+      <CustomHeading heading="How to book a Property with Xtrabrick" removeSeparator />
       <AnimatedContentWrapper
         id={"howToBuy"}
         style={bannerAnimation}
         ref={bannerRef}
       >
         <Image
-          src={"/assets/images/propertiesProcessBanner.png"}
+          src={"/assets/images/propertiesProcessBanner-v2.png"}
           alt={"Buy Properties Banner"}
           layout={"responsive"}
           objectFit={"cover"}

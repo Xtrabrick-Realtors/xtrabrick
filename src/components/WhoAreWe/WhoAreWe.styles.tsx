@@ -6,7 +6,8 @@ export const WhoAreWeContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 0 20px;
-  margin-bottom: -80px;
+  margin-bottom: -125px;
+  margin-top: 100px;
 `;
 
 export const ItemContainer = styled.div`
