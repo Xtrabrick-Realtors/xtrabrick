@@ -75,6 +75,10 @@ export const Form = styled.form`
       margin: 10px 0;
     }
   }
+  & .pdf {
+    display: none;
+    width: 100%;
+  }
 `;
 
 export const Input = styled.input`
@@ -86,6 +90,9 @@ export const Input = styled.input`
 
   @media (max-width: 767px) {
     margin: 10px 0;
+  }
+  &:disabled {
+    color: rgba(0, 0, 0, 0.7);
   }
 `;
 

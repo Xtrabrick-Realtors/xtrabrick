@@ -1,15 +1,21 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { FILTER_DATA, JOBS_DATA } from "@/constants";
+import { JOBS_DATA } from "@/constants";
 import { theme } from "@/constants/basetheme";
 import LocationIcon from "../../../public/assets/svg/LocationIcon";
 import JobIcon from "../../../public/assets/svg/JobIcon";
 import RupeeIcon from "../../../public/assets/svg/RupeeIcon";
 import { Job, JobsListingWrapper, JobsWrapper } from "./Career.styles";
+import JobForm from "./JobForm";
 
 const Career = () => {
+  const [showForm, setShowForm] = useState<boolean>(false);
+  const [job, setJob] = useState<string>("");
+  const closeModal = () => {
+    setShowForm(false);
+  };
   return (
     <div
       style={{
@@ -36,63 +42,8 @@ const Career = () => {
           loading={"eager"}
         />
       </div>
-      {/* second fold */}
-      <JobsWrapper>
-        {/* left */}
-        {/* <div
- style={{
- flex: 0.25,
- backgroundColor: "#F4F4F4",
- borderRadius: 20,
- display: "flex",
- flexDirection: "column",
- padding: "30px 20px 30px",
- }}
- >
- <h2
- style={{
- fontFamily: theme.fonts.lato,
- fontSize: "22px",
- fontWeight: 700,
- }}
- >
- Filter By
- </h2>
- {FILTER_DATA.map((item, index) => {
- return (
- <div key={index}>
- <p
- style={{
- fontFamily: theme.fonts.lato,
- fontSize: "20px",
- fontWeight: 700,
- margin: "15px 0",
- }}
- >
- {item.category}
- </p>
- {item.filters?.map((filter, i) => {
- return (
- <p
- style={{
- fontFamily: theme.fonts.lato,
- fontSize: "18px",
- fontWeight: 400,
- margin: "15px 0",
- cursor: "pointer",
- }}
- key={i}
- >
- {filter}
- </p>
- );
- })}
- </div>
- );
- })}
- </div> */}
 
-        {/* right */}
+      <JobsWrapper>
         <JobsListingWrapper>
           {JOBS_DATA.map((job, index) => {
             return (
@@ -168,7 +119,7 @@ const Career = () => {
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
                   <div>
-                    {/* {job?.postTime && <p
+                    {/* <p
                       style={{
                         fontFamily: theme.fonts.lato,
                         fontWeight: 400,
@@ -177,8 +128,7 @@ const Career = () => {
                       }}
                     >
                       Poster: {job?.postTime}
-                    </p>} */}
-                    
+                    </p> */}
                     <p
                       style={{
                         fontFamily: theme.fonts.lato,
@@ -201,6 +151,10 @@ const Career = () => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                    }}
+                    onClick={() => {
+                      setShowForm(true);
+                      setJob(job?.position);
                     }}
                   >
                     <p
@@ -231,6 +185,8 @@ const Career = () => {
         style={{ marginBottom: -55 }}
       />
       <Footer />
+
+      {showForm && <JobForm closeModal={closeModal} job={job} />}
     </div>
   );
 };

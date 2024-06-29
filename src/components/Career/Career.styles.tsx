@@ -33,7 +33,7 @@ export const FilterContainer = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    flex: 1; 
+    flex: 1;
     margin-bottom: 20px;
     border-radius: 0;
     padding: 20px;
@@ -136,4 +136,62 @@ export const Job = styled.div`
     padding: 10px 10px;
     margin-top: 10px;
   }
+`;
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999990;
+
+  @media (max-width: 768px) {
+    align-items: flex-end;
+  }
+`;
+
+export const ModalContent = styled.div<{ height?: string; width?: string }>`
+  background: #fff;
+  padding: 30px;
+  max-width: ${({ width = "500px" }) => width};
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  max-height: ${({ height = "75vh" }) => height};
+  overflow: auto;
+
+  h3 {
+    font-size: 16px;
+    font-family: ${theme.fonts.lato};
+    margin: 15px 0px;
+    font-weight: 400;
+  }
+
+  ol {
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: ${theme.fonts.lato};
+    font-weight: 400;
+    margin: 15px 0px;
+  }
+  p {
+    font-size: 16px;
+    font-family: ${theme.fonts.lato};
+    margin: 15px 0px;
+    font-weight: 400;
+  }
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
 `;
