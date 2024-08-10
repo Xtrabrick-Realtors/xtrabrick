@@ -6,9 +6,10 @@ import { BannerItem } from "./PromotionalBanner.styles";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 
-const PromotionalBanner: React.FC<{ data: any; id?: string }> = ({
+const PromotionalBanner: React.FC<{ data: any; id?: string; showDots?: boolean }> = ({
   data,
   id,
+  showDots = false,
 }) => {
   const OPTIONS: EmblaOptionsType = {};
   const [ref, inView] = useInView({
@@ -23,7 +24,7 @@ const PromotionalBanner: React.FC<{ data: any; id?: string }> = ({
 
   return (
     <animated.div style={animation} ref={ref} id={id}>
-      <Carousel options={OPTIONS}>
+      <Carousel options={OPTIONS} showBottomDots={showDots}>
         {data?.map((item: any, index: number) => (
           <BannerItem
             key={index}

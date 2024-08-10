@@ -1,3 +1,4 @@
+import AreaIcon from "../../public/assets/svg/AreaIcon";
 import BathroomIcon from "../../public/assets/svg/BathroomIcon";
 import BedIcon from "../../public/assets/svg/BedIcon";
 import BedroomIcon from "../../public/assets/svg/BedroomIcon";
@@ -28,11 +29,14 @@ import LocationIcon from "../../public/assets/svg/LocationIcon";
 import MailIcon from "../../public/assets/svg/MailIcon";
 import MissionIcon from "../../public/assets/svg/MissionIcon";
 import ObstacleIcon from "../../public/assets/svg/ObstacleIcon";
+import OfficeIcon from "../../public/assets/svg/OfficeIcon";
 import PhoneIcon from "../../public/assets/svg/PhoneIcon";
 import PiggyBankIcon from "../../public/assets/svg/PiggyBankIcon";
 import PlaneIcon from "../../public/assets/svg/PlaneIcon";
 import PositivityIcon from "../../public/assets/svg/PositivityIcon";
 import QualityIcon from "../../public/assets/svg/QualityIcon";
+import ShopIcon from "../../public/assets/svg/ShopIcon";
+import StoreIcon from "../../public/assets/svg/StoreIcon";
 import Sustainabilityicon from "../../public/assets/svg/SustainabilityIcon";
 import SwimmingPoolIcon from "../../public/assets/svg/SwimmingPoolIcon";
 import TaxiIcon from "../../public/assets/svg/TaxiIcon";
@@ -43,6 +47,10 @@ import XIcon from "../../public/assets/svg/XIcon";
 import ZeroFeesIcon from "../../public/assets/svg/ZeroFeesIcon";
 // LINKS_FOOTER
 export const HEADER_ITEMS = [
+  {
+    name: "About Us",
+    link: "/#aboutUs",
+  },
   {
     name: "Properties",
     link: "/properties",
@@ -86,10 +94,6 @@ export const HEADER_ITEMS = [
   {
     name: "Vaastu Shastra",
     link: "/vaastu",
-  },
-  {
-    name: "About Us",
-    link: "/#aboutUs",
   },
   {
     name: "Careers",
@@ -636,7 +640,7 @@ export const PROPERTIES_NAVIGATOR = [
     link: "/properties/#commercialProperties",
   },
   {
-    name: "Developer Plots",
+    name: "NA Plots",
     link: "/properties/#developerUnits",
   },
   // {
@@ -762,26 +766,26 @@ export const DEVELOPER_PLOTS = [
 
 export const COMMERCIAL_PROPERTIES_WIDGET = [
   {
-    icon: DeveloperplotsIcon,
+    icon: OfficeIcon,
     title: "Offices",
     description: "Businesses, Corporations and Professional Services",
     info: [],
   },
   {
-    icon: DeveloperplotsIcon,
+    icon: StoreIcon,
     title: "Large Departmental Stores",
     description: "Shopping Malls, Showrooms",
     info: [],
   },
 
   {
-    icon: DeveloperplotsIcon,
+    icon: ShopIcon,
     title: "Shops",
     description: `All sizes of shops, stores and boutiques`,
     info: [],
   },
   {
-    icon: DeveloperplotsIcon,
+    icon: AreaIcon,
     title: "Commercial Areas",
     description: `High foot traffic, accessible locations with public transport`,
     info: [],
@@ -809,7 +813,7 @@ export const RESIDENTIAL_PROPERTIES = [
     image: "/assets/images/ResidentialProperties/rr5.jpg",
     name: "Resdential Property 5",
   },
-   {
+  {
     image: "/assets/images/ResidentialProperties/rr5.jpg",
     name: "Resdential Property 5",
   },

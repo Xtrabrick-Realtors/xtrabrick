@@ -82,7 +82,7 @@ const ContactUs = () => {
             form with your details about your enquiries and we would respond
             your enquiry shortly.
           </InfoText>
-          <InfoText>Working hours: (Mon - Sat) 10am – 7 pm</InfoText>
+          <InfoText>Working hours: (Mon - <span style={{color: 'red'}}>Sun</span>) 10am – 7pm</InfoText>
 
           <Form onSubmit={handleSubmit}>
             <div>

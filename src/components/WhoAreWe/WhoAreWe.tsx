@@ -22,7 +22,8 @@ const WhoAreWe = () => {
     transform: inView ? "translateY(0)" : "translateY(150px)",
   });
   return (
-    <AnimatedContainer id="aboutUs" style={animation} ref={ref}>
+    <AnimatedContainer style={animation} ref={ref}>
+      <div style={{position: 'absolute', top: -80}} id="aboutUs"/>
       <CustomHeading heading="Who are we?" />
 
       {WHO_ARE_WE_DATA.map((item, index) => (

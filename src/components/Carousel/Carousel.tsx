@@ -92,7 +92,6 @@ const Carousel: React.FC<PropType> = (props) => {
     if (!autoplayPlugin) return;
     if (autoplayOnHover && autoPlay && emblaApi && autoplayPlugin) {
       if (isHovered) {
-        console.log(isHovered, "isHovered");
         autoplayPlugin.play();
       } else {
         autoplayPlugin.stop();

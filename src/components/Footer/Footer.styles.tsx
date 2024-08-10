@@ -235,7 +235,7 @@ export const FixedFooterButton = styled.button`
 
 export const EnquireButton = styled.div`
   position: fixed;
-  left: 10px;
+  right: 10px;
   bottom: 10px;
   padding: 15px 20px;
   background-color: #0173b0;

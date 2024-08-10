@@ -129,7 +129,7 @@ const ParallaxCarousel: React.FC<PropType> = (props) => {
                 {/* name */}
                 <p
                   style={{
-                    fontSize: "14px",
+                    fontSize: "16px",
                     fontFamily: theme.fonts.lato,
                     fontWeight: 400,
                   }}

@@ -3,12 +3,11 @@ import Header from "@/components/Header/Header";
 import React from "react";
 import Image from "next/image";
 import {
-  AMENITIES_PROVIDED,
   COMMERCIAL_PROPERTIES,
   COMMERCIAL_PROPERTIES_WIDGET,
   DEVELOPER_PLOTS,
   DEVELOPER_PROPERTIES,
-  LOCATION_BENEFITS,
+  // LOCATION_BENEFITS,
   PROPERTIES_NAVIGATOR,
   RESIDENTIAL_PROPERTIES,
 } from "@/constants";
@@ -27,11 +26,11 @@ import {
   AmenityItem,
   AmenityText,
   LocationWrapper,
-  LocationText,
-  LocationBenefitsWrapper,
-  BenefitItem,
-  BenefitName,
-  BenefitTime,
+  // LocationText,
+  // LocationBenefitsWrapper,
+  // BenefitItem,
+  // BenefitName,
+  // BenefitTime,
 } from "./Properties.styles";
 import { animated, useSpring } from "react-spring";
 import { useInView } from "react-intersection-observer";
@@ -39,8 +38,8 @@ import { useInView } from "react-intersection-observer";
 const Properties = () => {
   const AnimatedBannerWrapper = animated(BannerWrapper);
   const AnimatedContentWrapper = animated(ContentWrapper);
-  const AnimatedAmenitiesWrapper = animated(AmenitiesWrapper);
-  const AnimatedLocationWrapper = animated(LocationWrapper);
+  // const AnimatedAmenitiesWrapper = animated(AmenitiesWrapper);
+  // const AnimatedLocationWrapper = animated(LocationWrapper);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -53,10 +52,10 @@ const Properties = () => {
     triggerOnce: true,
     threshold: 0.3,
   });
-  const [locationRef, locationInView] = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
+  // const [locationRef, locationInView] = useInView({
+  //   triggerOnce: true,
+  //   threshold: 0.3,
+  // });
   const animation = useSpring({
     opacity: inView ? 1 : 0,
     transform: inView ? "translateY(0)" : "translateY(150px)",
@@ -69,10 +68,10 @@ const Properties = () => {
     opacity: amenitiesInView ? 1 : 0,
     transform: amenitiesInView ? "translateY(0)" : "translateY(150px)",
   });
-  const locationAnimation = useSpring({
-    opacity: locationInView ? 1 : 0,
-    transform: locationInView ? "translateY(0)" : "translateY(150px)",
-  });
+  // const locationAnimation = useSpring({
+  //   opacity: locationInView ? 1 : 0,
+  //   transform: locationInView ? "translateY(0)" : "translateY(150px)",
+  // });
   return (
     <PropertiesWrapper>
       <Header activeTab="Properties" />
@@ -97,7 +96,10 @@ const Properties = () => {
         </NavigatorWrapper>
       </AnimatedBannerWrapper>
 
-      <CustomHeading heading="How to book a Property with Xtrabrick" removeSeparator />
+      <CustomHeading
+        heading="How to book a Property with Xtrabrick"
+        removeSeparator
+      />
       <AnimatedContentWrapper
         id={"howToBuy"}
         style={bannerAnimation}
@@ -113,14 +115,13 @@ const Properties = () => {
           loading={"eager"}
         />
       </AnimatedContentWrapper>
-      <CustomHeading
+      {/* <CustomHeading
         heading="Residential Properties"
         id={"residentialProperties"}
-      />
-      <ResidentialPropertiesCarousel />
+      /> */}
 
-      <CustomHeading heading="Amenities Provided" />
-      <AnimatedAmenitiesWrapper ref={amenitiesRef} style={amenitiesAnimation}>
+      {/* <CustomHeading heading="Amenities Provided" /> */}
+      {/* <AnimatedAmenitiesWrapper ref={amenitiesRef} style={amenitiesAnimation}>
         {AMENITIES_PROVIDED.map((item, index) => {
           return (
             <AmenityItem key={index}>
@@ -129,27 +130,53 @@ const Properties = () => {
             </AmenityItem>
           );
         })}
-      </AnimatedAmenitiesWrapper>
-
-      <PromotionalBanner data={RESIDENTIAL_PROPERTIES} />
-
-      <CustomHeading
+      </AnimatedAmenitiesWrapper> */}
+      <div
+        style={{
+          marginTop: 30,
+          height: 1,
+          width: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.4)",
+          marginBottom: 70,
+        }}
+      />
+      <PromotionalBanner data={RESIDENTIAL_PROPERTIES} showDots />
+      <div style={{ marginTop: 35 }} />
+      <ResidentialPropertiesCarousel />
+      {/* <CustomHeading
         heading="Commercial Properties"
         id={"commercialProperties"}
+      /> */}
+
+      <div
+        style={{
+          marginTop: 30,
+          height: 1,
+          width: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.4)",
+          marginBottom: 70,
+        }}
       />
-
+      <PromotionalBanner data={COMMERCIAL_PROPERTIES} showDots />
+      <div style={{ marginTop: 30 }} />
       <VaastuDetailsContainer data={COMMERCIAL_PROPERTIES_WIDGET} />
-
-      <PromotionalBanner data={COMMERCIAL_PROPERTIES} />
-
-      <CustomHeading
+      {/* <CustomHeading
         heading="Developer / Non- Agricultural Plots"
         id="developerUnits"
+      /> */}
+      <div
+        style={{
+          marginTop: 30,
+          height: 1,
+          width: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.4)",
+          marginBottom: 70,
+        }}
       />
+      <PromotionalBanner data={DEVELOPER_PROPERTIES} showDots />
+       <div style={{ marginTop: 30 }} />
       <VaastuDetailsContainer data={DEVELOPER_PLOTS} />
-
-      <PromotionalBanner data={DEVELOPER_PROPERTIES} />
-      <CustomHeading heading="Location Benefits" id={"locationBenfits"} />
+      {/* <CustomHeading heading="Location Benefits" id={"locationBenfits"} />
       <AnimatedLocationWrapper ref={locationRef} style={locationAnimation}>
         <LocationText>Pune, Maharashtra</LocationText>
         <LocationBenefitsWrapper id={"locationBenefits"}>
@@ -163,7 +190,7 @@ const Properties = () => {
             );
           })}
         </LocationBenefitsWrapper>
-      </AnimatedLocationWrapper>
+      </AnimatedLocationWrapper> */}
 
       <Footer />
     </PropertiesWrapper>

@@ -62,8 +62,8 @@ export const LogoContainer = styled.div`
 export const RightWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 140px;
-
+  // margin-left: 140px;
+  text-align: center;
   @media (max-width: 767px) {
     margin-left: 12px;
   }

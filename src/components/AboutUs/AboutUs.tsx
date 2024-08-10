@@ -35,7 +35,7 @@ const AboutUs: React.FC = () => {
           className="backgroundImage"
         />
       </BackgroundImage>
-      <LogoContainer>
+      {/* <LogoContainer>
         <Image
           alt="XTRABRICK"
           src="/assets/images/Logo.png"
@@ -43,18 +43,18 @@ const AboutUs: React.FC = () => {
           width={174}
           className="logo"
         />
-      </LogoContainer>
+      </LogoContainer> */}
       <RightWrapper>
-        <div>
+        <div >
           <AboutUsHeading>About Us</AboutUsHeading>
           <XtraBrickRealtors>XTRABRICK REALTORS</XtraBrickRealtors>
           {/* <ExperienceText color="#20B2FF" isBold>20 +</ExperienceText>
  <ExperienceText color="#ffffff" isBold>Years of Experience</ExperienceText> */}
         </div>
-        <AddressText>
+        {/* <AddressText>
           Office No. 45, Vision One Mall, Bhumkar Chowk, <br />
           Wakad - 411033, Pune, Maharashtra, India
-        </AddressText>
+        </AddressText> */}
       </RightWrapper>
     </AnimatedContainer>
   );
