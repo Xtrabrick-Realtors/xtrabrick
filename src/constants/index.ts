@@ -794,27 +794,27 @@ export const COMMERCIAL_PROPERTIES_WIDGET = [
 
 export const RESIDENTIAL_PROPERTIES = [
   {
-    image: "/assets/images/ResidentialProperties/rr1.jpg",
+    image: "/assets/images/ResidentialProperties/r1.jpg",
     name: "Resdential Property 1",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr2.jpg",
+    image: "/assets/images/ResidentialProperties/r2.jpg",
     name: "Resdential Property 2",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr3.jpg",
+    image: "/assets/images/ResidentialProperties/r3.jpg",
     name: "Resdential Property 3",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr4.jpg",
+    image: "/assets/images/ResidentialProperties/r4.jpg",
     name: "Resdential Property 4",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr5.jpg",
+    image: "/assets/images/ResidentialProperties/r5.jpg",
     name: "Resdential Property 5",
   },
   {
-    image: "/assets/images/ResidentialProperties/rr5.jpg",
+    image: "/assets/images/ResidentialProperties/r6.jpg",
     name: "Resdential Property 5",
   },
 ];
@@ -836,40 +836,24 @@ export const COMMERCIAL_PROPERTIES = [
     image: "/assets/images/CommercialProperties/c4.jpg",
     name: "Commercial Property 4",
   },
-  {
-    image: "/assets/images/CommercialProperties/c5.jpg",
-    name: "Commercial Property 5",
-  },
-  {
-    image: "/assets/images/CommercialProperties/c6.jpg",
-    name: "Commercial Property 6",
-  },
-  {
-    image: "/assets/images/CommercialProperties/c7.jpg",
-    name: "Commercial Property 7",
-  },
 ];
 
 export const DEVELOPER_PROPERTIES = [
   {
-    image: "/assets/images/CommercialProperties/d1.jpg",
+    image: "/assets/images/CommercialProperties/n1.jpg",
     name: "Developer Property 1",
   },
   {
-    image: "/assets/images/CommercialProperties/d2.jpg",
+    image: "/assets/images/CommercialProperties/n2.jpg",
     name: "Developer Property 2",
   },
   {
-    image: "/assets/images/CommercialProperties/d3.jpg",
+    image: "/assets/images/CommercialProperties/n3.jpg",
     name: "Developer Property 3",
   },
   {
-    image: "/assets/images/CommercialProperties/d4.jpg",
+    image: "/assets/images/CommercialProperties/n4.jpg",
     name: "Developer Property 4",
-  },
-  {
-    image: "/assets/images/CommercialProperties/d5.jpg",
-    name: "Developer Property 5",
   },
 ];
 
