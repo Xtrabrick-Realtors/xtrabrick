@@ -6,6 +6,7 @@ import BusIcon from "../../public/assets/svg/BusIcon";
 import CardinalDirectionIcon from "../../public/assets/svg/CardinalDirectionIcon";
 import CarIcon from "../../public/assets/svg/CarIcon";
 import Collaborationicon from "../../public/assets/svg/CollaborationIcon";
+import Construction from "../../public/assets/svg/Construction";
 import ConsultIcon from "../../public/assets/svg/ConsultIcon";
 import CycleIcon from "../../public/assets/svg/CycleIcon";
 import DeveloperplotsIcon from "../../public/assets/svg/DeveloperplotsIcon";
@@ -18,15 +19,18 @@ import FiveElementsIcon from "../../public/assets/svg/FiveElementsIcon";
 import FormIcon from "../../public/assets/svg/FormIcon";
 import FortuneIcon from "../../public/assets/svg/FortuneIcon";
 import FundingIcon from "../../public/assets/svg/FundingIcon";
+import Growth from "../../public/assets/svg/Growth";
 import GymIcon from "../../public/assets/svg/GymIcon";
 import HealthIcon from "../../public/assets/svg/HealthIcon";
 import HomeIcon from "../../public/assets/svg/HomeIcon";
 import IdealLocationIcon from "../../public/assets/svg/IdealLocationIcon";
 import InstagramIcon from "../../public/assets/svg/InstagramIcon";
+import Investment from "../../public/assets/svg/Investment";
 import LinkedinIcon from "../../public/assets/svg/LinkedinIcon";
 import LivingAreaicon from "../../public/assets/svg/LivingAreaicon";
 import LocationIcon from "../../public/assets/svg/LocationIcon";
 import MailIcon from "../../public/assets/svg/MailIcon";
+import Maintenance from "../../public/assets/svg/Maintenance";
 import MissionIcon from "../../public/assets/svg/MissionIcon";
 import ObstacleIcon from "../../public/assets/svg/ObstacleIcon";
 import OfficeIcon from "../../public/assets/svg/OfficeIcon";
@@ -738,26 +742,26 @@ export const LOCATION_BENEFITS = [
 
 export const DEVELOPER_PLOTS = [
   {
-    icon: DeveloperplotsIcon,
+    icon: Construction,
     title: "Construct Whenever You Wish",
     description: "Flexibility of usage according to your resources",
     info: [],
   },
   {
-    icon: DeveloperplotsIcon,
+    icon: Maintenance,
     title: "0% Maintenance Costs",
     description: "With 0% maintenance cost build whenever you wish to",
     info: [],
   },
 
   {
-    icon: DeveloperplotsIcon,
+    icon: Growth,
     title: "High-Growth Potential Locations",
     description: `Invest in locations that are going to bloom in coming years`,
     info: [],
   },
   {
-    icon: DeveloperplotsIcon,
+    icon: Investment,
     title: "Great Investment Option",
     description: `Invest now in high-growth potential locations and reap profits later`,
     info: [],

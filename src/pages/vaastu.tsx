@@ -25,7 +25,7 @@ const Vastu = () => {
         }}
       >
         <Image
-          src={"/assets/images/vaastu.png"}
+          src={"/assets/images/vaastu.jpg"}
           alt={"Vaastu"}
           layout={"responsive"}
           objectFit={"cover"}
