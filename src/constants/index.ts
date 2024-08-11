@@ -103,25 +103,25 @@ export const HEADER_ITEMS = [
 
 export const PROMOTIONAL_BANNER_ITEMS = [
   {
-    image: "/assets/images/CommercialProperties-v3.jpg",
+    image: "/assets/images/homeBanner.jpg",
     name: "Commercial Properties",
   },
-  {
-    image: "/assets/images/unlockDreamHome-v2.png",
-    name: "Unloack Dream Home",
-  },
-  {
-    image: "/assets/images/premiumProperties-v2.png",
-    name: "Premium Properties",
-  },
-  {
-    image: "/assets/images/vaastuHarmony-v2.png",
-    name: "Vaastu Harmony",
-  },
-  {
-    image: "/assets/images/homeLoan-v2.png",
-    name: "Home Loan",
-  },
+  // {
+  //   image: "/assets/images/unlockDreamHome-v2.png",
+  //   name: "Unloack Dream Home",
+  // },
+  // {
+  //   image: "/assets/images/premiumProperties-v2.png",
+  //   name: "Premium Properties",
+  // },
+  // {
+  //   image: "/assets/images/vaastuHarmony-v2.png",
+  //   name: "Vaastu Harmony",
+  // },
+  // {
+  //   image: "/assets/images/homeLoan-v2.png",
+  //   name: "Home Loan",
+  // },
 ];
 
 export const CLIENTS_INFO = [

@@ -33,7 +33,7 @@ const Career = () => {
         }}
       >
         <Image
-          src={"/assets/images/carrerBanner.png"}
+          src={"/assets/images/carrerBanner.jpg"}
           alt={"About Us"}
           layout={"responsive"}
           objectFit={"cover"}
