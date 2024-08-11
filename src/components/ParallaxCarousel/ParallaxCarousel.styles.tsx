@@ -1,3 +1,4 @@
+import { theme } from "@/constants/basetheme";
 import styled from "styled-components";
 
 export const Embla = styled.div`
@@ -51,6 +52,15 @@ export const EmblaControls = styled.div`
   justify-content: space-between;
   gap: 1.2rem;
   margin-top: 1.8rem;
+`;
+
+export const Para = styled.p`
+    font-size: 16px;
+    font-family: ${theme.fonts.lato};
+     font-weight: 400;
+            @media (max-width: 768px) {
+     font-size: 12px;
+  }    
 `;
 
 /* export const EmblaButtons = styled.div`

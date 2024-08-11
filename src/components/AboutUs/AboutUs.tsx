@@ -2,12 +2,10 @@ import React from "react";
 import Image from "next/image";
 import {
   AboutUsContainer,
-  LogoContainer,
   RightWrapper,
   AboutUsHeading,
   XtraBrickRealtors,
   BackgroundImage,
-  AddressText,
 } from "./AboutUs.styles";
 import { animated, useSpring } from "react-spring";
 import { useInView } from "react-intersection-observer";

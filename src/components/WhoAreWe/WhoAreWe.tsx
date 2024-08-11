@@ -23,7 +23,6 @@ const WhoAreWe = () => {
   });
   return (
     <AnimatedContainer style={animation} ref={ref}>
-      <div style={{position: 'absolute', top: -80}} id="aboutUs"/>
       <CustomHeading heading="Who are we?" />
 
       {WHO_ARE_WE_DATA.map((item, index) => (

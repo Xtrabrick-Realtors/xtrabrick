@@ -31,6 +31,7 @@ const Home = () => {
           alignItems: "center",
           flex: 1,
           marginTop: "70px",
+          position: 'relative',
         }}
       >
         <Header />
@@ -39,6 +40,7 @@ const Home = () => {
         <PropertyCategories />
         <Locations />
         <AboutUs />
+        <div style={{height: 0 }} id="aboutUs" />
         <WhoAreWe />
         <WhatIsXtraBrick />
         <OurTeam />

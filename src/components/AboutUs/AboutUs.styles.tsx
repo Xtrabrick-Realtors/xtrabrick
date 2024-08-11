@@ -14,9 +14,9 @@ export const AboutUsContainer = styled.div`
 
   @media (max-width: 767px) {
     height: auto;
-    padding-top: 27px;
+    padding-top: 50px;
     margin-top: 50px;
-    margin-bottom: -100px; 
+    margin-bottom: -25px; 
   }
 `;
 

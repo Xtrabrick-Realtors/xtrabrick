@@ -13,6 +13,7 @@ import {
   EmblaSlideNumber,
   EmblaControls,
   EmblaButtons,
+  Para,
 } from "./ParallaxCarousel.styles";
 import {
   NextButton,
@@ -127,15 +128,7 @@ const ParallaxCarousel: React.FC<PropType> = (props) => {
                 <StarIcon stars={item?.stars} />
                 {/* testimonal */}
                 {/* name */}
-                <p
-                  style={{
-                    fontSize: "16px",
-                    fontFamily: theme.fonts.lato,
-                    fontWeight: 400,
-                  }}
-                >
-                  {item?.testimony}
-                </p>
+                <Para>{item?.testimony}</Para>
                 <p
                   style={{
                     fontSize: "24px",
