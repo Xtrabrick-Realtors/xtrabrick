@@ -7,6 +7,7 @@ export const CustomHeadingContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 55px 0px;
+  position: relative;
 `;
 
 export const HeadingSeparator = styled.div`

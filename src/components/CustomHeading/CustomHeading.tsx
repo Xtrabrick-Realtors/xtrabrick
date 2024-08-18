@@ -11,7 +11,14 @@ const CustomHeading: React.FC<{
   removeSeparator?: boolean;
 }> = ({ heading, id, removeSeparator = false }) => {
   return (
-    <CustomHeadingContainer id={id}>
+    <CustomHeadingContainer>
+      <div
+        style={{
+          position: "absolute",
+          top: -60,
+        }}
+        id={id}
+      ></div>
       {!removeSeparator && <HeadingSeparator />}
       <Heading>{heading}</Heading>
       {!removeSeparator && <HeadingSeparator />}

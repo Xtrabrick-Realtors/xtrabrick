@@ -22,10 +22,10 @@ import {
   NavigatorWrapper,
   NavigatorLink,
   ContentWrapper,
-  AmenitiesWrapper,
-  AmenityItem,
-  AmenityText,
-  LocationWrapper,
+  // AmenitiesWrapper,
+  // AmenityItem,
+  // AmenityText,
+  // LocationWrapper,
   // LocationText,
   // LocationBenefitsWrapper,
   // BenefitItem,
@@ -99,9 +99,10 @@ const Properties = () => {
       <CustomHeading
         heading="How to book a Property with Xtrabrick"
         removeSeparator
+          id={"howToBuy"}
       />
       <AnimatedContentWrapper
-        id={"howToBuy"}
+      
         style={bannerAnimation}
         ref={bannerRef}
       >
@@ -139,6 +140,7 @@ const Properties = () => {
           backgroundColor: "rgba(0, 0, 0, 0.4)",
           marginBottom: 70,
         }}
+               id="residentialProperties"
       />
       <PromotionalBanner data={RESIDENTIAL_PROPERTIES} showDots />
       <div style={{ marginTop: 35 }} />
@@ -156,6 +158,7 @@ const Properties = () => {
           backgroundColor: "rgba(0, 0, 0, 0.4)",
           marginBottom: 70,
         }}
+         
       />
       <PromotionalBanner data={COMMERCIAL_PROPERTIES} showDots />
       <div style={{ marginTop: 30 }} />
@@ -172,6 +175,7 @@ const Properties = () => {
           backgroundColor: "rgba(0, 0, 0, 0.4)",
           marginBottom: 70,
         }}
+        id="developerUnits"
       />
       <PromotionalBanner data={DEVELOPER_PROPERTIES} showDots />
        <div style={{ marginTop: 30 }} />

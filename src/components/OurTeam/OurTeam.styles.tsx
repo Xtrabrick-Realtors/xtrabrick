@@ -7,6 +7,7 @@ export const OurTeamContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
+  max-width: 1660px;
   @media (max-width: 767px) {
     padding: 0px 10px;
     margin-bottom: -40px;
