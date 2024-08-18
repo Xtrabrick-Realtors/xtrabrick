@@ -99,13 +99,9 @@ const Properties = () => {
       <CustomHeading
         heading="How to book a Property with Xtrabrick"
         removeSeparator
-          id={"howToBuy"}
+        id={"howToBuy"}
       />
-      <AnimatedContentWrapper
-      
-        style={bannerAnimation}
-        ref={bannerRef}
-      >
+      <AnimatedContentWrapper style={bannerAnimation} ref={bannerRef}>
         <Image
           src={"/assets/images/propertiesProcessBanner-v2.png"}
           alt={"Buy Properties Banner"}
@@ -140,7 +136,7 @@ const Properties = () => {
           backgroundColor: "rgba(0, 0, 0, 0.4)",
           marginBottom: 70,
         }}
-               id="residentialProperties"
+        id="residentialProperties"
       />
       <PromotionalBanner data={RESIDENTIAL_PROPERTIES} showDots />
       <div style={{ marginTop: 35 }} />
@@ -158,7 +154,7 @@ const Properties = () => {
           backgroundColor: "rgba(0, 0, 0, 0.4)",
           marginBottom: 70,
         }}
-         
+        id="commercialProperties"
       />
       <PromotionalBanner data={COMMERCIAL_PROPERTIES} showDots />
       <div style={{ marginTop: 30 }} />
@@ -178,7 +174,7 @@ const Properties = () => {
         id="developerUnits"
       />
       <PromotionalBanner data={DEVELOPER_PROPERTIES} showDots />
-       <div style={{ marginTop: 30 }} />
+      <div style={{ marginTop: 30 }} />
       <VaastuDetailsContainer data={DEVELOPER_PLOTS} />
       {/* <CustomHeading heading="Location Benefits" id={"locationBenfits"} />
       <AnimatedLocationWrapper ref={locationRef} style={locationAnimation}>
