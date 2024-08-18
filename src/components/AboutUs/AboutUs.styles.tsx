@@ -11,7 +11,7 @@ export const AboutUsContainer = styled.div`
   padding-top: 75px; 
   margin-top: 75px;
   margin-bottom: -30px;
-
+  max-width: 1600px;
   @media (max-width: 767px) {
     height: auto;
     padding-top: 50px;
